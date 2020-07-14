@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        var num;
+        do {
+            num = prompt('Enter number:', '13');
+        } while (!Number.isInteger(+num));
+        var isSimple = true;
+
+        for (var i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                isSimple = false;
+                break;
+            }
+        }
+
+        alert('Number is simple: ' + isSimple);
+    </script>
+</body>
+</html>

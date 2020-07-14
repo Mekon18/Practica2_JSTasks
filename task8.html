@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        var num;
+        do {
+            num = prompt('Enter number:', '123');
+        } while (!(num.length < 4 && Number.isInteger(+num)));
+        var reverseNum = 0;
+        var numLength = num.length;
+        for (var i = 0; i < numLength; i++) {
+            reverseNum += (num % 10) * (Math.pow(10, numLength-i-1));
+            num = Math.floor(num / 10);
+
+        }
+
+        alert('Reverse number is: ' + reverseNum);
+
+
+    </script>
+</body>
+</html>

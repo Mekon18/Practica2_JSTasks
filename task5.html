@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        var nums;
+        do {
+            nums = prompt('Enter numbers:', '13 32 1 23 11');
+            nums = nums.split(' ').map(num => +num);
+        } while (!(nums.length > 0 && nums.length < 6 && nums.every(Number.isInteger)));
+
+
+        alert('Max number is: ' + Max(nums));
+
+        function Max(nums) {
+            var max = nums[0];
+            for (var i = 1; i <nums.length; i++) {
+                if (max < nums[i]) {
+                    max = nums[i];
+                }
+            }
+            return max;
+        }
+    </script>
+</body>
+</html>

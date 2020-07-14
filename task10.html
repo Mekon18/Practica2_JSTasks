@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        var score = 0;
+        var questions = [
+            { question: 'Inside which HTML element do we put the JavaScript?', answers: ['<js>', '<script>', '<scripting>'], rightAnswer: 2 },
+            { question: 'Where is the correct place to insert a JavaScript?', answers: ['The <body> section', 'Both the <body> and <head> section', 'The <head> section'], rightAnswer: 2 },
+            { question: 'How does a WHILE loop start?', answers: ['while(i<=10)', 'while(i<=10;i++)', 'while i=1 to 10'], rightAnswer: 1 }
+        ];
+        for (var i = 0; i < questions.length; i++) {
+            score += askQuestion(questions[i])
+        }
+        alert('Your score is: ' + score);
+
+        function askQuestion(q) {
+            var questionText = q.question + '\n';
+            for (var i = 0; i < q.answers.length; i++) {
+                questionText += (i + 1) + '. ' + q.answers[i] + '\n';
+            }
+
+            var givenAnswer = prompt(questionText, 1);
+            if (givenAnswer == q.rightAnswer) {
+                return 2;
+            }
+            return 0;
+        }
+
+    </script>
+</body>
+</html>

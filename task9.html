@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        var sign;
+        var upper = 100;
+        var lower = 0;
+        var half = Math.floor(upper / 2);
+        While: while (true) {
+            sign = prompt('does your number ' + half + '?(==, >, <)', '==');
+            switch (sign) {
+                case '==':
+                    break While;
+                case '>':
+                    lower = half;
+                    break;
+                case '<':
+                    upper = half;                    
+                    break;
+            }
+            half = Math.floor((upper + lower) / 2);
+        }
+        alert('Your number is: ' + half);
+
+
+    </script>
+</body>
+</html>

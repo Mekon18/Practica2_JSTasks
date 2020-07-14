@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        var name;
+        var fruits = ["apple", "pineapple", "orange"];
+
+        name = prompt('Enter fruit:', 'Orange');
+        
+        alert('Index of fruit is: ' + FruitSearch(name));
+
+        function FruitSearch(name) {
+            name = name.toLowerCase();
+            for (var i = 0; i < fruits.length; i++) {
+                if (fruits[i] == name) {
+                    return i;
+                }
+            }
+            return -1;
+            
+        }
+    </script>
+</body>
+</html>
